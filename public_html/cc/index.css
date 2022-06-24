@@ -1,0 +1,112 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+div
+{
+    width: fit-content;
+    height: fit-content;
+}
+div > a
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 10px;
+    background: #e5e5e5;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform: translateY(0);
+}
+div > a:hover
+{
+    transform: translateY(15px);
+}
+div > a *
+{
+    cursor: pointer;
+}
+div > a > span
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+}
+div > a > i
+{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: gray;
+    border-radius: 15px;
+    box-shadow: inset black 10px 10px 10px 10px;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+#usualGlyph
+{
+    animation: animSlideRight;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+#scaleGlyph
+{
+    animation: animGrow;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    transform: scale(1);
+}
+@keyframes animSlideRight
+{
+    from
+    {
+        transform: none;
+    }
+    15%
+    {
+        transform: translateX(-200%);
+    }
+    35%
+    {
+        transform: translateX(10%);
+    }
+    42%
+    {
+        transform: none;
+    }
+}
+@keyframes animGrow
+{
+    from
+    {
+        transform: scale(1);
+    }
+    15%
+    {
+        transform: scale(0.01);
+    }
+    35%
+    {
+        transform: scale(1.1);
+    }
+    42%
+    {
+        transform: scale(1);
+    }
+}
+
