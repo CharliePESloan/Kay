@@ -71,6 +71,19 @@ body
         opacity: 1;
     }
 }
+@keyframes animBoxAppear
+{
+    from
+    {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    to
+    {
+        transform: none;
+        opacity: 1;
+    }
+}
 h1,h2,h3
 {
     margin: 0;
