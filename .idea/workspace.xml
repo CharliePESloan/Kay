@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8cbbb35-1bdf-47c6-8397-389bde3cb3ec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public_html/cc/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/cc/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/cc/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/home-expand.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/home/home-expand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/home/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,7 @@
       <recent name="$PROJECT_DIR$/public_html" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public_html/home" />
       <recent name="$PROJECT_DIR$/public_html/cc" />
     </key>
   </component>
@@ -73,7 +77,7 @@
       <workItem from="1656023908061" duration="14459000" />
       <workItem from="1656042582105" duration="660000" />
       <workItem from="1656043390410" duration="401000" />
-      <workItem from="1656043806183" duration="3631000" />
+      <workItem from="1656043806183" duration="4597000" />
     </task>
     <servers />
   </component>
