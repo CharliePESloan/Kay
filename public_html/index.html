@@ -10,12 +10,17 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".box").forEach(box => {
-            box.addEventListener("mouseover", function () {
-                if (!this.classList.contains("hovered")) {
-                    this.classList.add("hovered");
-                    setTimeout(() => this.classList.remove("hovered"), 501);
-                }
-            });
+            box.classList.add("init");
+            setTimeout(() =>
+            {
+                box.classList.remove("init");
+                box.addEventListener("mouseover", function () {
+                    if (!this.classList.contains("hovered")) {
+                        this.classList.add("hovered");
+                        setTimeout(() => this.classList.remove("hovered"), 501);
+                    }
+                });
+            }, 1000);
         });
     });
 </script>
