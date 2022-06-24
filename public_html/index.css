@@ -1,9 +1,9 @@
 html
 {
-    --boxAppearDelayName: 0.4s;
-    --boxAppearDelayContact: 0.5s;
-    --boxAppearDelayHobbies: 0.3s;
-    --boxAppearDelayGames: 0.15s;
+    --boxAppearDelayName: 0.6s;
+    --boxAppearDelayContact: 0.4s;
+    --boxAppearDelayHobbies: 0.2s;
+    --boxAppearDelayGames: 0.1s;
     --boxAppearDelayMusic: 0.0s;
     box-sizing: border-box;
     margin: 0;
@@ -41,7 +41,7 @@ body
 {
     /*transform: translateX(-100vw);*/
     transform: scale(0);
-    animation: animBoxAppear 1s ease-out forwards 0.5s;
+    animation: animBoxAppear 0.25s ease-out forwards var(--boxAppearDelay);
 }
 @keyframes animBoxHover
 {
@@ -86,6 +86,7 @@ h1,h2,h3
     height: 800px;
     border: 1px solid black;
     margin-top: 30px;
+    overflow: hidden;
 }
 
 
@@ -109,10 +110,10 @@ h1,h2,h3
     user-select: all;
     -webkit-user-select: all;
 }
-#name.init
-{
-    animation: animBoxAppear 1s ease-out forwards var(--boxAppearDelay);
-}
+/*#name.init*/
+/*{*/
+/*    animation: animBoxAppear 1s ease-out forwards var(--boxAppearDelay);*/
+/*}*/
 
 
 

@@ -12,8 +12,10 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+
         const contactBox = document.querySelector("#contact");
         const boxes = document.querySelectorAll(".box");
+
         boxes.forEach(box => {
             box.classList.add("init");
         });
@@ -31,6 +33,7 @@
             hoverContactBox()
             contactBox.addEventListener("mouseover", hoverContactBox);
         }, 1500);
+        
     });
 </script>
 
