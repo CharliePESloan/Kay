@@ -68,12 +68,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-<a id="music" class="box">
-    <form onsubmit="alert('Not yet implemented'); ev.preventDefault()" action="./suggest-music.php" method="post">
-        <h2><a onclick="this.parentElement.parentElement.parentElement.submit()">Send</a> some music?</h2>
+<div id="music" class="box">
+    <form onsubmit="preventDefault(); alert('Not yet implemented'); return false;" action="./suggest-music.php" method="post">
+        <h2><span onclick="document.querySelector('#music form').submit()">Send</span> some music?</h2>
         <textarea name="suggestion"></textarea>
     </form>
-</a>
+</div>
 
 
 

@@ -160,6 +160,10 @@ h1,h2,h3
     -webkit-user-select: revert;
     resize: none;
 }
+#music h2 span
+{
+    cursor: pointer;
+}
 
 
 
