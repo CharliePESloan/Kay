@@ -23,6 +23,7 @@ div > a
     margin: 0 10px;
     background: #e5e5e5;
     border-radius: 35px;
+    cursor: pointer;
 }
 div > a > span
 {
@@ -48,45 +49,52 @@ div > a > i
 #usualGlyph
 {
     animation: animSlideRight;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 #scaleGlyph
 {
     animation: animGrow;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    transform: scale(0.8);
 }
-@keyframes SlideRight
+@keyframes animSlideRight
 {
     from
     {
-        transform: translateX(0);
+        transform: none;
     }
-    to
+    15%
     {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
-    from
+    35%
     {
-        transform: translateX(-100%);
+        transform: translateX(10%);
     }
-    to
+    42%
     {
         transform: none;
     }
 }
-@keyframes Grow
+@keyframes animGrow
 {
     from
     {
         transform: scale(0.8);
     }
-    20%
+    15%
     {
-        transform: scale(0.2);
+        transform: scale(0.01);
     }
-    88%
+    35%
     {
         transform: scale(1);
     }
-    to
+    42%
     {
         transform: scale(0.8);
     }
