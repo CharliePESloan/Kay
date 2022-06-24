@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,19 +10,20 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll(".box").forEach(box => {
+        const boxes = document.querySelectorAll(".box");
+        boxes.forEach(box => {
             box.classList.add("init");
-            setTimeout(() =>
-            {
-                box.classList.remove("init");
-                box.addEventListener("mouseover", function () {
-                    if (!this.classList.contains("hovered")) {
-                        this.classList.add("hovered");
-                        setTimeout(() => this.classList.remove("hovered"), 501);
-                    }
-                });
-            }, 1000);
         });
+        setTimeout(() =>
+        {
+            boxes.forEach(box => box.classList.remove("init"));
+            document.querySelector("#contact").addEventListener("mouseover", function () {
+                if (!this.classList.contains("hovered")) {
+                    this.classList.add("hovered");
+                    setTimeout(() => this.classList.remove("hovered"), 501);
+                }
+            });
+        }, 1500);
     });
 </script>
 
@@ -89,7 +91,7 @@
 
 <div id="music" class="box">
     <form onsubmit="preventDefault(); alert('Not yet implemented'); return false;" action="./suggest-music.php" method="post">
-        <h2><span onclick="document.querySelector('#music form').submit()">Send</span> some music?</h2>
+        <h2><span onclick="document.querySelector('#music form').submit()">Submit...</span> some music?</h2>
         <textarea name="suggestion"></textarea>
     </form>
 </div>
