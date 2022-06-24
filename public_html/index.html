@@ -1,66 +1,14 @@
-<style>
-html
-{
-    box-sizing: border-box;
-}
-*
-{
-    box-sizing: inherit;
-    cursor: default;
-    user-select: none;
-    -webkit-user-select: none;
-}
-.box
-{
-    position: absolute;
-    min-width: 300px;
-    min-height: 300px;
-    box-shadow: 0 0 5px black;
-    background: #b34;
-    color: white;
-    padding: 20px;
-    overflow-y: scroll;
-    border-radius: 15px;
-}
-.box:hover
-{
-    animation: animBoxHover 1s ease-in-out forward;
-}
-@keyframes animBoxHover
-{
-    50%
-    {
-        filter: brightness(100%);
-    }
-}
-h1,h2,h3
-{
-    margin: 0;
-}
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kay</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
 
 
 
 
-
-<style>
-#name
-{
-    top: 10px;
-    left: 30px;
-    width: 1000px;
-    height: 300px;
-    padding: 30px;
-    background: #b34;
-    color: white;
-    font-size: 200px;
-}
-#name span
-{
-    user-select: all;
-    -webkit-user-select: all;
-}
-</style>
 <a id="name" class="box">
     <span>Kay Sloan</span>.
 </a>
@@ -68,25 +16,6 @@ h1,h2,h3
 
 
 
-<style>
-#contact
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 360px;
-    left: 30px;
-    width: 310px;
-    height: 50px;
-    min-width: revert;
-    min-height: revert;
-    padding: 0;
-    background: #b34;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
-}
-</style>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#contact").addEventListener("click", function(ev) {
@@ -106,54 +35,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-<style>
-#hobbies
-{
-    top: 460px;
-    left: 60px;
-    width: 280px;
-    min-width: revert;
-    font-size: 30px;
-    background: #4db60a;
-    padding: 30px;
-}
-</style>
-<a id="hobbies" class="box">
+<div id="hobbies" class="box">
     <h1>Hobbies</h1>
     <ul>
         <li>Ideas!</li>
         <li>Music?</li>
         <li>Computers...</li>
     </ul>
-</a>
+</div>
 
 
 
 
 
 
-<style>
-#games
-{
-    top: 360px;
-    left: 390px;
-    width: 190px;
-    height: 400px;
-    background: #5af;
-    font-size: 28px;
-}
-#games details
-{
-    margin: 20px 0;
-    user-select: text;
-    -webkit-user-select: text;
-}
-#games summary
-{
-    cursor: pointer;
-}
-</style>
-<a id="games" class="box">
+<div id="games" class="box">
     <h2>Game Reviews</h2>
     <details>
         <summary>Death Stranding</summary>
@@ -164,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <summary>Elden Ring</summary>
         Best Dark Souls game so far.
     </details>
-</a>
+</div>
 
 
 
@@ -172,38 +68,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-<style>
-#music
-{
-    top: 360px;
-    left: 730px;
-    width: 190px;
-    height: 400px;
-    background: #FAC;
-    font-size: 28px;
-}
-#music form
-{
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100%;
-    margin: 0;
-}
-#music textarea
-{
-    flex-grow: 1;
-    width: 100%;
-    height: 
-    height: fill-parent;
-    cursor: revert;
-    user-select: revert;
-    -webkit-user-select: revert;
-}
-</style>
 <a id="music" class="box">
-    <form>
-        <h2>Send some music?</h2>
-        <textarea width="250" height="250"></textarea>
+    <form onsubmit="alert('Not yet implemented'); ev.preventDefault()" action="./suggest-music.php" method="post">
+        <h2><a onclick="this.parentElement.parentElement.parentElement.submit()">Send</a> some music?</h2>
+        <textarea name="suggestion"></textarea>
     </form>
 </a>
 
@@ -256,3 +124,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="desc">
 Hello, world! I'm Kay. This website is just for showing stuff off. Maybe I'll just add text. I'll remove eventually and there's no git repo yet.
 </div>-->
+
+<!--<div id="showoffProgram" class="box">-->
+
+<!--</div>-->
+
+</body>
+</html>
