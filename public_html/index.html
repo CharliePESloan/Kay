@@ -7,24 +7,38 @@
 <body>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".box").forEach(box => {
+            box.addEventListener("mouseover", function () {
+                if (!this.classList.contains("hovered")) {
+                    this.classList.add("hovered");
+                    setTimeout(() => this.classList.remove("hovered"), 501);
+                }
+            });
+        });
+    });
+</script>
 
 
-<a id="name" class="box">
+
+
+<div id="name" class="box">
     <span>Kay Sloan</span>.
-</a>
+</div>
 
 
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector("#contact").addEventListener("click", function(ev) {
-        navigator.clipboard.writeText(this.dataset.email);
-        alert("Copied to clipboard");
-        ev.preventDefault();
-        return false;
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector("#contact").addEventListener("click", function(ev) {
+            navigator.clipboard.writeText(this.dataset.email);
+            alert("Copied to clipboard");
+            ev.preventDefault();
+            return false;
+        });
     });
-});
 </script>
 <a id="contact" class="box" data-email="kay@kaysloan.co.uk">
     kay@kaysloan.co.uk
