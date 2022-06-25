@@ -1,0 +1,15 @@
+.box.init
+{
+    transform: translateX(-100vw);
+}
+@keyframes animBoxAppear
+{
+    from
+    {
+        transform: translateX(-100vw);
+    }
+    to
+    {
+        transform: translateX(0);
+    }
+}

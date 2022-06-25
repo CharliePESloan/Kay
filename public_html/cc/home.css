@@ -5,21 +5,12 @@ html
     --boxAppearDelayHobbies: 0.2s;
     --boxAppearDelayGames: 0.1s;
     --boxAppearDelayMusic: 0.0s;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
-body
-{
-    margin: 0;
-}
-*
-{
-    box-sizing: inherit;
-    cursor: default;
-    user-select: none;
-    -webkit-user-select: none;
-}
+
+
+
+
+
 .box
 {
     --boxAppearDelay: 0s;
@@ -27,11 +18,19 @@ body
     min-width: 300px;
     min-height: 300px;
     box-shadow: 0 0 5px black;
-    background: #b34;
+    background: #d94747;
     color: white;
     padding: 20px;
     overflow-y: scroll;
     border-radius: 15px;
+}
+.box:not(.clickable)
+{
+    transition: filter 0.5s;
+}
+.box:not(.clickable):hover
+{
+    filter: brightness(115%);
 }
 .box.hovered
 {
@@ -39,8 +38,6 @@ body
 }
 .box.init
 {
-    /*transform: translateX(-100vw);*/
-    transform: scale(0);
     animation: animBoxAppear 0.25s ease-out forwards var(--boxAppearDelay);
 }
 @keyframes animBoxHover
@@ -56,17 +53,6 @@ body
     to
     {
         filter: brightness(100%);
-    }
-}
-@keyframes animBoxAppear
-{
-    from
-    {
-        transform: translateX(-100vw);
-    }
-    to
-    {
-        transform: translateX(0);
     }
 }
 h1,h2,h3

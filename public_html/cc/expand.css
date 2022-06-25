@@ -1,0 +1,15 @@
+.box.init
+{
+    transform: scale(0);
+}
+@keyframes animBoxAppear
+{
+    from
+    {
+        transform: scale(0);
+    }
+    to
+    {
+        transform: scale(1);
+    }
+}
